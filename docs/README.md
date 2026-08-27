@@ -2,62 +2,55 @@
 
 ## Overview
 
-OctoAcme uses a customer-first, iterative delivery approach to project management with clear ownership and data-informed decision-making. This documentation serves as the central resource for how OctoAcme teams execute projects from initiation through delivery and continuous improvement. Our methodology emphasizes psychological safety, cross-functional collaboration, and regular feedback loops to ensure we deliver customer value efficiently and sustainably.
+OctoAcme follows a lightweight, outcome-driven project management approach organized around a simple lifecycle: Initiation → Planning → Execution → Release → Close & Retrospective. The process emphasizes customer-first decision making, iterative delivery of small, testable increments, clear ownership of outcomes (with a named Project Manager and Product Lead for each initiative), and data-informed adjustments. Psychological safety and continuous learning are encouraged so teams can iterate quickly and improve their practices over time.
 
-## Project Lifecycle at a Glance
+Work is tracked using a prioritized backlog and a project board with defined workflow states. Planning turns approved initiatives into a release plan and a set of shippable backlog items with clear acceptance criteria and estimates. During execution, teams follow a pull-request driven workflow with automated CI checks, small changelists, and required approvals to ensure quality and maintainability. Releases are governed by checklists and smoke tests, and retrospectives capture learnings and convert them into action items.
 
-OctoAcme projects flow through five distinct phases:
+Roles and communication cadence are explicit: Product Managers define outcomes and success metrics, Project Managers coordinate delivery, Developers implement and test, and QA validates acceptance criteria. The team rhythm includes daily standups for blocking and coordination, weekly delivery syncs, demos at the end of each sprint/milestone, and regular stakeholder updates. Escalation paths are defined to route risks from the team level to Product Lead and Sponsor as needed.
 
-```
-Initiation → Planning → Execution → Release → Close & Retrospective
-```
-
-Each phase builds on the previous one, with clear gates and deliverables to ensure alignment and quality throughout the project lifecycle.
-
-## Core Documentation
-
-### 1. Initiation Phase
-- **[Project Initiation Guide](octoacme-project-initiation.md)** - Define project scope, business need, success metrics, and key stakeholders. Establish go/no-go decision gates for planning.
-
-### 2. Planning Phase
-- **[Project Planning](octoacme-project-planning.md)** - Break work into actionable backlog items, estimate scope, identify dependencies, and create release plans with clear milestones.
-
-### 3. Execution Phase
-- **[Execution & Tracking](octoacme-execution-and-tracking.md)** - Day-to-day management including team workflows, quality standards, testing requirements, and escalation procedures for blockers.
-
-### 4. Release Phase
-- **[Release & Deployment Guide](octoacme-release-and-deployment.md)** - Manage release types, pre-release requirements, deployment checklists, rollback procedures, and post-deployment verification.
-
-### 5. Close & Retrospective
-- **[Retrospective & Continuous Improvement](octoacme-retrospective-and-continuous-improvement.md)** - Capture learnings, celebrate achievements, identify improvements, and track action items for future iterations.
-
-## Cross-Cutting Topics
-
-These documents apply throughout the project lifecycle:
-
-- **[Project Management Overview](octoacme-project-management-overview.md)** - High-level introduction to OctoAcme methodology, core roles, key artifacts, and communication cadence.
-
-- **[Risk Management & Communication](octoacme-risks-and-communication.md)** - Risk register templates, escalation paths, stakeholder communication strategies, and incident response procedures.
-
-- **[Roles & Personas](octoacme-roles-and-personas.md)** - Detailed descriptions of Project Managers, Product Managers, Developers, and QA responsibilities and communication patterns.
-
-## How to Use This Documentation
-
-**Getting Started?**  
-Start with [Project Management Overview](octoacme-project-management-overview.md) to understand our methodology and core concepts.
-
-**Beginning a New Project?**  
-Follow [Project Initiation Guide](octoacme-project-initiation.md) to define your project scope, success metrics, and stakeholders.
-
-**In Active Delivery?**  
-Reference [Execution & Tracking](octoacme-execution-and-tracking.md) for day-to-day guidance and [Risk Management & Communication](octoacme-risks-and-communication.md) for managing blockers and stakeholder updates.
-
-**Ready to Release?**  
-Check [Release & Deployment Guide](octoacme-release-and-deployment.md) for pre-release requirements, deployment procedures, and post-release verification steps.
-
-**Completing a Project?**  
-Follow [Retrospective & Continuous Improvement](octoacme-retrospective-and-continuous-improvement.md) to capture learnings and drive improvements for future projects.
+Quality assurance is integrated into every stage. Authors are expected to include unit and integration tests, run end-to-end smoke tests for critical flows, and use security scanning in CI. Manual QA is applied where appropriate. Release and rollback playbooks ensure safe deployments, while dashboards and velocity/burndown tracking close the loop on progress and reliability.
 
 ---
 
-**Note:** These documents are living artifacts. If you identify gaps, have questions, or suggestions for improvements, please create an issue using the [Add Content to Project Management Process Docs](../.github/ISSUE_TEMPLATE/add-update-content-to-process-docs.yml) template.
+## Project Lifecycle at a Glance
+
+- Initiation: Problem definition, one-pager, stakeholder alignment, decision gate
+- Planning: Backlog creation, estimations, Definition of Done, release plan
+- Execution: Development, PR reviews, CI, QA, and tracking on the project board
+- Release: Pre-release checks, staging verification, production rollout, post-deploy verification
+- Close & Retrospective: Capture learnings, create action items, and feed improvements back into the backlog
+
+---
+
+## Core Documentation
+
+- **Project Management Overview** — [octoacme-project-management-overview.md](octoacme-project-management-overview.md)
+- **Project Initiation Guide** — [octoacme-project-initiation.md](octoacme-project-initiation.md)
+- **Project Planning** — [octoacme-project-planning.md](octoacme-project-planning.md)
+- **Execution & Tracking** — [octoacme-execution-and-tracking.md](octoacme-execution-and-tracking.md)
+- **Risks & Communication** — [octoacme-risks-and-communication.md](octoacme-risks-and-communication.md)
+- **Release & Deployment Guide** — [octoacme-release-and-deployment.md](octoacme-release-and-deployment.md)
+- **Retrospective & Continuous Improvement** — [octoacme-retrospective-and-continuous-improvement.md](octoacme-retrospective-and-continuous-improvement.md)
+- **Roles & Personas** — [octoacme-roles-and-personas.md](octoacme-roles-and-personas.md)
+
+---
+
+## Quick Reference: When to use each doc
+
+- Getting started / overview: Read **Project Management Overview**
+- Starting a new project: Follow **Project Initiation Guide** and create the One-pager
+- Planning work and releases: Use **Project Planning** to build the backlog and schedule
+- Day-to-day delivery: Operate from **Execution & Tracking** and the project board
+- Managing risks & stakeholders: Follow **Risks & Communication** and maintain the Risk Register
+- Preparing and performing releases: Follow **Release & Deployment Guide**
+- Learning and improvement: Run retrospectives per **Retrospective & Continuous Improvement** and add action items to the backlog
+
+---
+
+## How to contribute or request changes
+
+To propose edits or additions to these process docs, please open an issue using the "Add Content to Project Management Process Docs" template located in `.github/ISSUE_TEMPLATE/`. Provide a summary, rationale, and suggested content. This repository uses issues to review documentation changes before merging.
+
+---
+
+Closes #2
